@@ -24,7 +24,7 @@ const Content = ({handleModal}) => {
             <div className=" inline-block align-middle h-[30vh] sm:h-[40vh] md:h-[80vh]"></div>
 
             {/*** Descripcion ***/}
-            <h2 className="text-3xl font-semibold text-center sm:mt-10 md:mt-0 px-3 sm:px-20 font-rajdhani ">Nuestra empresa es desarrolladora de <span className="text-azul">software</span>, creadora de <span className="text-azul">sitios web</span> y de <span className="text-azul">aplicaciones</span> muy atractivos que <span className="text-azul">lo ayudan a destacarse</span> entre la multitud. Nuestro objetivo es satisfacer sus necesidades, ya sea con un <span className="text-azul">nuevo software</span> o con <span className="text-azul">mejoras a los sistemas existentes.</span></h2>
+            <h2 className="text-3xl font-semibold text-center mt-10 md:mt-0 px-3 sm:px-20 font-rajdhani ">Nuestra empresa es desarrolladora de <span className="text-azul">software</span>, creadora de <span className="text-azul">sitios web</span> y de <span className="text-azul">aplicaciones</span> muy atractivos que <span className="text-azul">lo ayudan a destacarse</span> entre la multitud. Nuestro objetivo es satisfacer sus necesidades, ya sea con un <span className="text-azul">nuevo software</span> o con <span className="text-azul">mejoras a los sistemas existentes.</span></h2>
                 
             <CardsPresentation />
             
