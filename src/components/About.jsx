@@ -27,7 +27,7 @@ const About = () => {
         <div className="w-full flex justify-center bg-gray-200 pt-20 ">
             <p className="font-rajdhani border-2 border-b-blue-900">SITIOS WEB</p>
         </div>
-        <div className="px-10 xl:flex pt-20 bg-gray-200 ">
+        <div className="px-3 sm:px-10 xl:flex pt-20 bg-gray-200 ">
             <div className=" mt-10 lg:mt-0 font-normal">
                 <p className="font-rajdhani text-blue-900 text-4xl px-0 md:px-20">
                     Creamos un sitio web elegante y funcional para tu negocio

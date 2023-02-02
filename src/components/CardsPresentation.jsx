@@ -13,7 +13,7 @@ const CardsPresentation = () => {
                     Soluciones empresariales personalizadas
                 </p>
             </div>
-            <p className="text-lg font-normal text-gray-700 mt-0 pb-5 px-5
+            <p className="text-lg font-normal text-gray-700 mt-0 pb-5 px-2 sm:px-5
                 mx-4"> 
                 Podrá interactuar con clientes, prospectos y empleados. Nuestro objetivo es ayudarlo a tener éxito, al proporcionar un diseño y una experiencia de usuario de primer nivel, para que pueda concentrarse más en los negocios que en la tecnología, recibiendo todos los datos necesarios para seguir avanzando. <br /> <br /> Creatividad, el poder de crear algo de la nada. No solo creamos sistemas, sino que brindamos una gama completa de servicios, desde simples hasta complejos programas de nivel empresarial, nos aseguraremos de que siempre se haga bien.
             </p>
@@ -29,7 +29,7 @@ const CardsPresentation = () => {
                     Incorporarse a las nuevas tecnologías
                 </p>
             </div>
-            <p className="text-lg font-normal text-gray-700 mt-0 pb-5  px-8
+            <p className="text-lg font-normal text-gray-700 mt-0 pb-5 px-2 sm:px-8
                 mx-4"> 
                 Cree su sitio web, programa, aplicacion o sistema (del que pueda estar orgulloso de presumir) desde cero con nuestro equipo experimentado. Ofrecemos todo tipo de sistemas, como gestión de empresas, analisis de datos, almacenamiento y gestión de información, etcétera. Tambien hacemos diferentes sitios web, incluidos blogs y sitios web de facturación que incluyen registros, alojamiento de dominios, diseño, seguridad, mantenimiento y optimización.<br /> <br /> Crearemos una solución personalizada en respuesta a sus necesidades, al mismo tiempo que mantendremos la funcionalidad de su sitio durante toda su vida útil, a medida que convierten a los visitantes en clientes.
             </p>
