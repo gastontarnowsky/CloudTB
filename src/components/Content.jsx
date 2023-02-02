@@ -15,12 +15,12 @@ const Content = ({handleModal}) => {
         </div>
 
         {/*** Primera imagen ***/}
-        <div className="w-[50%] md:w-[35%] xl:w-[30%] bg-indigo-300 rounded-full mx-auto z-10 absolute right-0 top-96 left-0">
+        <div className="w-[50%] md:w-[35%] xl:w-[30%] bg-azul rounded-full mx-auto z-10 absolute right-0 top-96 left-0">
             <img src="company.svg" alt="Image company" className="rounded-full pb-14" />
         </div>
 
         
-        <div className="block pt-20 pb-10 bg-gradient-to-t from-indigo-400 to-white lg:justify-between lg:align-center ">
+        <div className="block pt-20 pb-10 bg-gradient-to-t from-azul to-white lg:justify-between lg:align-center ">
             <div className=" sm:inline-block sm:align-middle sm:h-[80vh]"></div>
 
             {/*** Descripcion ***/}

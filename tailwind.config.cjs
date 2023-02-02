@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        azul: "#887aff"
+        azul: "#66b6f3"
       },
       fontFamily: {
         'sans': ['ui-sans-serif', 'system-ui'],

@@ -7,7 +7,7 @@ const About = () => {
         {/*** Primer imagen Sobre Nosotros ***/}
         <div 
             className=" bg-cover bg-center"
-            style={{ backgroundImage: 'linear-gradient(to top, rgba(248, 248, 253, 0.5), rgba(129, 140, 248, 0.99)), url(/sobre4kkk.jpg)', padding: '0 0 10rem 0' }}
+            style={{ backgroundImage: 'linear-gradient(to top, rgba(248, 248, 253, 0.5), rgba(102, 182, 243, 0.99)), url(/sobre4kkk.jpg)', padding: '0 0 10rem 0' }}
         >
             <div className="pt-32 pb-20">
                 <p className="font-rajdhani  font-semibold tracking-[4px] text-6xl md:text-8xl text-zinc-600 pt-24 mb-10">
