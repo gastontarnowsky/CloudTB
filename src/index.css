@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --azul: #66b6f3;
+    --azulTwo: #96ccf5;
+    --azulOscuro: #290042;
+    --rojo: #fd3456;
+}
+
 html {
     scroll-behavior: smooth;
+}
+
+.color {
+    color: rgb(41 0 66);
+}
+
+.text-shadow-one:hover {
+    text-shadow: var(--azul) 1px 0 10px;
 }

@@ -1,29 +1,63 @@
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { Button, LinkNavigate } from '../components';
+import { UIContext } from '../contexts'; 
+import cloudIcon from '../assets/cloud.png';
+export const Header = () => {
 
+    const { handleModal, links } = useContext(UIContext);
 
-const Header = ({handleModal}) => {
-  return (
-    <header className="block md:flex py-7 px-5 lg:px-10 text-azul items-center text-center md:justify-between bg-white">
-        <a href="/" className="block md:flex text-center items-center p-2 gap-4 hover:cursor-pointer">
-            <img 
-                className="w-10 hidden md:block "
-                src="codda.png"
-                alt="logo codda"
-            />
-            <h1 className="text-4xl font-bold tracking-[4px] font-shadows text-azul">CloudTB</h1>
-        </a>
-        
-        <div className="gap-4 block lg:flex text-center ">
-            <a  href="#sobrenosotros" className="font-rajdhani text-zinc-600 text-2xl px-3 py-1 border-2 border-transparent hover:border-zinc-400 rounded-xl transform transition-all">
-                Sobre Nosotros
-            </a>
+    return (
+        <header className='fixed z-40 top-0 left-0 w-full bg-azulOscuro'>
+            <div className='w-11/12 md:w-9/12 mx-auto py-4'>
+                <div className='flex items-center justify-between'>
+                    <Link
+                        to={'/'}
+                        className={`w-32 `}
+                    >
+                        <img 
+                            src={cloudIcon}
+                            alt={'Cloud icon'}
+                            className=''
+                        />
+                    </Link>
 
-            <button type="button" onClick={handleModal} className="text-lg font-chakra tracking-[1px] px-3 py-1 border-2 border-azul rounded-xl font-bold hover:bg-azul hover:text-white hover:border-zinc-600 hover:border-2 transform transition-all">
-                <p>Contáctanos</p>
-            </button>
-        </div>
+                    {/* <div className="gap-4 block lg:flex text-center ">
+                        <a 
+                            href="#sobrenosotros" 
+                            className="font-rajdhani text-zinc-600 text-2xl px-3 py-1 border-2 border-transparent hover:border-zinc-400 rounded-xl transform transition-all"
+                        >
+                            Sobre Nosotros
+                        </a>
 
-    </header>
-  )
+                        <button type="button" onClick={handleModal} className="text-lg font-chakra tracking-[1px] px-3 py-1 border-2 border-azul rounded-xl font-bold hover:bg-azul hover:text-white hover:border-zinc-600 hover:border-2 transform transition-all">
+                            <p>Contáctanos</p>
+                        </button>
+                    </div> */}
+                    <nav className='hidden md:block'>
+                        <ul className='flex items-center gap-4'>
+                            {links.map((link) => (
+                                <li
+                                    key={link.path}
+                                >
+                                    {link.type === 'button' ? (
+                                        <Button
+                                            customClass='px-6'
+                                            type={'button'}
+                                            callback={function() {
+                                                handleModal()
+                                            }}
+                                            text={link.name}
+                                        />
+                                    ) : ( 
+                                        <LinkNavigate link={link} />
+                                    )}
+                                </li>
+                            ))}
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    )
 }
-
-export default Header

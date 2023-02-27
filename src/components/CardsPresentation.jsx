@@ -1,5 +1,5 @@
 
-const CardsPresentation = () => {
+export const CardsPresentation = () => {
   return (
     <div className="px-5 sm:px-20 pb-0 pt-10 grid gap-4 grid-cols-1 lg:grid-cols-2 text-center mb-20">
 
@@ -15,7 +15,7 @@ const CardsPresentation = () => {
             </div>
             <p className="text-lg font-normal text-gray-700 mt-0 pb-5 px-2 sm:px-5
                 mx-4"> 
-                Podrá interactuar con clientes, prospectos y empleados. Nuestro objetivo es ayudarlo a tener éxito, al proporcionar un diseño y una experiencia de usuario de primer nivel, para que pueda concentrarse más en los negocios que en la tecnología, recibiendo todos los datos necesarios para seguir avanzando. <br />Nos enfocamos en hacer las cosas bien, siempre, y nos aseguramos de que su experiencia con nosotros sea excelente en todo momento. <br /> <br /> Creatividad, el poder de crear algo de la nada. No solo creamos sistemas, sino que brindamos una gama completa de servicios, desde simples hasta complejos programas de nivel empresarial, nos aseguraremos de que siempre se haga bien.
+                
             </p>
         </div>
 
@@ -31,7 +31,6 @@ const CardsPresentation = () => {
             </div>
             <p className="text-lg font-normal text-gray-700 mt-0 pb-5 px-2 sm:px-8
                 mx-4"> 
-                Cree su sitio web, programa, aplicacion o sistema (del que pueda estar orgulloso de presumir) desde cero con nuestro equipo experimentado. Ofrecemos todo tipo de sistemas, como gestión de empresas, analisis de datos, almacenamiento y gestión de información, etcétera.<br /> Una pagina web NO solo es vender productos, existen muchos sistemas para mejorar el rendimiento de su negocio. Hacemos diferentes sitios web, incluidos blogs y sitios web de facturación que incluyen registros, alojamiento de dominios, diseño, seguridad, mantenimiento y optimización.<br /> <br /> Crearemos una solución personalizada en respuesta a sus necesidades, al mismo tiempo que mantendremos la funcionalidad de su sitio durante toda su vida útil, a medida que convierten a los visitantes en clientes.
             </p>
         </div>
 
@@ -40,8 +39,6 @@ const CardsPresentation = () => {
     </div>
   )
 }
-
-export default CardsPresentation
 
 
 /*<div className="grid gap-4 grid-cols-1 md:grid-cols-2 mx-10 mb-20 mt-0 rounded-xl shadow-xl shadow-zinc-700 text-center py-10 px-20 font-chakra text-xl">

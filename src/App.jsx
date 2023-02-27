@@ -1,30 +1,17 @@
-import Header from "./components/Header"
-import Content from "./components/Content"
-import Modal from "./components/Modal"
-import { useState } from "react"
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { UIProvider } from './contexts';
+import { HomePage } from './pages';
 
 function App() {
-  const [modal, setModal] = useState(false)
-  const handleModal =()=> {
-    setModal(!modal)
-  }
 
   return (
-    <div>
-      <Header 
-        handleModal={handleModal}
-      />
-      <Content
-        handleModal={handleModal}
-      />
-
-      {modal && (
-        <Modal 
-          handleModal={handleModal}
-        />
-      )}
-      
-    </div>
+    <UIProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path={'/'} element={<HomePage />} />
+        </Routes>
+      </BrowserRouter>
+    </UIProvider>
   )
 }
 

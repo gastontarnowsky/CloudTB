@@ -1,7 +1,9 @@
-import CardsWeb from "./CardsWeb"
-import CardsSoftware from "./CardsSoftware"
+import {
+    CardsSoftware,
+    CardsWeb
+} from '.'
 
-const About = () => {
+export const About = () => {
   return (
     <div className="text-5xl text-center " id="sobrenosotros">
 
@@ -89,5 +91,3 @@ const About = () => {
     </div>
   )
 }
-
-export default About

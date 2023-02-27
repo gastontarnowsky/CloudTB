@@ -1,47 +1,109 @@
+import { useContext } from 'react';
+import { Form, Formik } from 'formik';
+import * as yup from 'yup';
 
+import { UIContext } from '../contexts';
+import { IconEmail } from './icons';
+import { Input, Textarea } from './form';
 
-const Modal = ({handleModal}) => {
-  return (
-    <div className="fixed inset-0 z-50 hover:cursor-pointer" onClick={handleModal}>
-        <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0" >
-            <div className="fixed inset-0 bg-gray-900 bg-opacity-75"></div>
+export const Modal = () => {
 
-            <div className="hidden sm:inline-block sm:align-middle sm:h-screen"></div>
+    const { handleModal, modal } = useContext(UIContext);
 
-            <form onClick={(e) => e.stopPropagation()}  className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg w-full hover:cursor-auto">
-                <div className="px-4 m-5 pt-5 pb-4 sm:p-6 sm:pb-4 ">
-                    <div className="sm:flex sm:items-start gap-4 ">
+    const validSchema = yup.object().shape({
+        fullname: yup.string().required('Debe completar este campo').min(3, 'El valor ingresado es muy corto'),
+        email: yup.string().email('El correo ingresado no tiene un formato válido').required('Debe completar este campo'),
+        description: yup.string().min(30, 'La descripción debe tener al menos 30 caracteres').required('Debe completar este campo')
+    })
 
-                        {/*** Icon Email ***/}
-                        <div className="mx-auto flex-shrink-0 flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 sm:mx-0">
-                            <svg 
-                                className="w-12 h-12 text-blue-600 fill-current"
-                                xmlns="http://www.w3.org/2000/svg" 
-                            >
-                                <path d="M7 40q-1.2 0-2.1-.9Q4 38.2 4 37V11q0-1.2.9-2.1Q5.8 8 7 8h34q1.2 0 2.1.9.9.9.9 2.1v26q0 1.2-.9 2.1-.9.9-2.1.9Zm17-15.1L7 13.75V37h34V13.75Zm0-3L40.8 11H7.25ZM7 13.75V11v26Z"/>
-                            </svg>
-                        </div>
-                        
-                        {/*** Text, Inputs and sumbit ***/}
-                        <div className="text-center mt-3 sm:mt-0 sm:ml-0  sm:text-left text-black">
-                            <h2 className="text-xl text-black mt-4">¿En qué te podemos ayudar?</h2>
-                            
-                            <input className="bg-white border-b-2  border-indigo-400 mt-8 w-full p-1 " type="text" placeholder="Nombre y apellido"/>
-                            <input className="bg-white border-b-2 border-indigo-400 mt-8 w-full p-1 " type="email" placeholder="Email"/>
-                            <input className="bg-white border-b-2 border-indigo-400 mt-8 w-full p-1 " type="text" placeholder="Tel"/>
-                            <textarea className="bg-white border-b-2 border-indigo-400 mt-8 w-full p-1 " placeholder="Describe tu proyecto"/>
-                        
-                            <div className="mt-8 mb-3 p-2 w-full text-center font-bold text-indigo-400 hover:text-white bg-white hover:bg-indigo-600 border-2 border-indigo-400 hover:border-indigo-600 rounded-md cursor-pointer transform transition-all">
-                                <button className="">Enviar</button>
-                            </div>
-                        </div>
+    const handleSubmit = async (values, resetForm) => {
+        
+    }
+
+    return (
+        <section
+            className={`fixed bottom-0 left-0 z-50 flex flex-col items-center justify-center w-full h-screen hover:cursor-pointer
+                ${modal ? 'animate-showModal' : 'animate-hiddenModal'}`}
+            onClick={handleModal}
+        >
+            <div className={`inset-0 bg-gray-900 bg-opacity-75 h-full w-full`}></div>
+            <div
+                onClick={(e) => e.stopPropagation()}
+                className={`fixed z-60 w-11/12 sm:max-w-lg bg-white hover:cursor-default rounded-lg px-4 md:px-8 py-4 md:py-8`}
+            >
+                <div className='flex flex-col sm:flex-row'>
+                    <div className='sm:w-1/4 mx-auto'>
+                        <IconEmail />
                     </div>
+                    <Formik
+                        initialValues={{
+                            fullname: '',
+                            email: '',
+                            phone: '',
+                            description: '',
+                        }}
+                        validationSchema={validSchema}
+                        onSubmit={async (values, resetForm) => handleSubmit(values, resetForm)}
+                        enableReinitialize={true}
+                    >
+                        {({ errors, touched, handleChange, handleBlur, values }) => (
+                            <Form
+                                noValidate
+                                className={`w-full mt-4`}
+                            >
+                                <fieldset>
+                                    <legend className='text-black text-lg md:text-xl font-medium tracking-wide'>
+                                        ¿En que te podemos ayudar?
+                                    </legend>
+                                    <Input
+                                        handleChange={handleChange}
+                                        handleBlur={handleBlur}
+                                        value={values.fullname}
+                                        name={'fullname'}
+                                        id={'fullname'}
+                                        placeholder={'Nombre Completo (*)'}
+                                        error={(errors.fullname && touched.fullname) ? errors.fullname : ''}
+                                    />
+                                    <Input
+                                        handleChange={handleChange}
+                                        handleBlur={handleBlur}
+                                        value={values.email}
+                                        name={'email'}
+                                        id={'email'}
+                                        placeholder={'E-mail (*)'}
+                                        error={(errors.email && touched.email) ? errors.email : ''}
+                                    />
+                                    <Input
+                                        handleChange={handleChange}
+                                        handleBlur={handleBlur}
+                                        value={values.phone}
+                                        name={'phone'}
+                                        id={'phone'}
+                                        type={'tel'}
+                                        placeholder={'N° de teléfono'}
+                                    />
+                                    <Textarea
+                                        handleChange={handleChange}
+                                        handleBlur={handleBlur}
+                                        value={values.description}
+                                        name={'description'}
+                                        id={'description'}
+                                        placeholder={'Describe brevemente tu idea o proyecto (*)'}
+                                        error={(errors.description && touched.description) ? errors.description : ''}
+                                    />
+                                </fieldset>
+                                <button
+                                    type='submit'
+                                    className='mt-8 py-2.5 rounded-lg w-full text-center font-bold text-indigo-400 hover:text-white bg-white hover:bg-indigo-600 transition-all duration-300 border-2 border-indigo-400 hover:border-indigo-600'
+                                >
+                                    Enviar
+                                </button>
+                            </Form>
+                        )}
+                    </Formik>
                 </div>
 
-            </form>
-        </div>
-    </div>
-  )
+            </div>
+        </section>
+    )
 }
-
-export default Modal

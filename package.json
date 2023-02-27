@@ -11,10 +11,16 @@
   "dependencies": {
     "@types/react-transition-group": "^4.4.5",
     "daisyui": "^2.49.0",
+    "formik": "^2.2.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.8.1",
+    "react-snap-carousel": "^0.2.0",
     "reactstrap": "^9.1.5",
-    "router-dom": "^2.2.10"
+    "router-dom": "^2.2.10",
+    "swiper": "^9.0.4",
+    "yup": "^1.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",

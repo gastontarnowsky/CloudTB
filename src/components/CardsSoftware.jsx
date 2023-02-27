@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CardsSoftware = () => {
+export const CardsSoftware = () => {
   return (
     <div className="px-5 sm:p-20 pb-0 pt-10 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
 
@@ -70,5 +70,3 @@ const CardsSoftware = () => {
     </div>
   )
 }
-
-export default CardsSoftware
