@@ -56,7 +56,7 @@ export const Descriptions = () => {
                         <Swiper>
                             {cardsPresent.map((card) => (
                                 <SwiperSlide key={card.title}>
-                                    <li className='px-10 mx-10 bg-white mt-10 mb-5 py-10 rounded-xl shadow-lg shadow-neutral-500 h-[450px]'>
+                                    <li className='px-10 mx-10 bg-white mt-10 mb-5 py-10 rounded-xl shadow-lg shadow-neutral-500 h-[450px] md:h-auto lg:h-[500px] xl:h-[450px]'>
                                         <div className='flex flex-col gap-4'>
                                             <div className='flex items-center gap-4 overflow-hidden'>
                                                 <div className='flex items-center'>
