@@ -15,11 +15,10 @@ export const Modal = () => {
         email: yup.string().email('El correo ingresado no tiene un formato válido').required('Debe completar este campo'),
         description: yup.string().min(30, 'La descripción debe tener al menos 30 caracteres').required('Debe completar este campo')
     })
-
+{/*}
     const handleSubmit = async (values, resetForm) => {
         
-    }
-
+    }  */}
     return (
         <section
             className={`fixed bottom-0 left-0 z-50 flex flex-col items-center justify-center w-full h-screen hover:cursor-pointer
@@ -53,7 +52,7 @@ export const Modal = () => {
                             >
                                 <fieldset>
                                     <legend className='text-black text-lg md:text-xl font-medium tracking-wide'>
-                                        ¿En que te podemos ayudar?
+                                        ¿En qué te podemos ayudar?
                                     </legend>
                                     <Input
                                         handleChange={handleChange}

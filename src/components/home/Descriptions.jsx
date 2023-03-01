@@ -17,12 +17,12 @@ const cardsPresent = [
     {
         img: Present1,
         title: 'Soluciones empresariales personalizadas',
-        text: ``
+        text: `Brindamos soluciones comerciales personalizadas para organizaciones de alto crecimiento. Trabajamos en estrecha colaboración con los clientes para crear productos personalizados que sean innovadores, atractivos y relevantes.`
     },
     {
         img: Present2,
-        title: 'Incorporarse a las nueva tecnologías',
-        text: ``
+        title: 'Incorporarse a las nuevas tecnologías',
+        text: `Póngase al día con las nuevas tecnologías con el desarrollador de software más reciente, mantenga sus proyectos a tiempo y rinda mejor que nunca.`
     }
 ] 
 
@@ -32,7 +32,7 @@ export const Descriptions = () => {
         <div className="min-h-screen bg-gradient-to-t from-azul to-white flex flex-col justify-center">
             <div className='w-11/12 md:w-9/12 mx-auto'>
                 <div className='flex flex-col md:gap-8 md:flex-row md:items-center'>
-                    <div className='md:w-1/2'>
+                    <div className='md:w-1/2 mt-10'>
                         <div className=''>
                             <h2 className='text-2xl'>
                                 Con un equipo de <span className='text-azul font-bold'>programadores</span> experimentados {""}
@@ -56,9 +56,9 @@ export const Descriptions = () => {
                         <Swiper>
                             {cardsPresent.map((card) => (
                                 <SwiperSlide key={card.title}>
-                                    <li className='px-10 mx-10 bg-white my-10 py-10 rounded-xl shadow-lg shadow-neutral-500 h-auto'>
-                                        <div className='flex flex-col gap-8'>
-                                            <div className='flex items-enter gap-4 overflow-hidden'>
+                                    <li className='px-10 mx-10 bg-white mt-10 mb-5 py-10 rounded-xl shadow-lg shadow-neutral-500 h-[450px]'>
+                                        <div className='flex flex-col gap-4'>
+                                            <div className='flex items-center gap-4 overflow-hidden'>
                                                 <div className='flex items-center'>
                                                     <img 
                                                         src={card.img}
@@ -66,15 +66,15 @@ export const Descriptions = () => {
                                                         className='w-32 h-32 rounded-full'
                                                     />
                                                 </div>
-                                                <div className='mt-8'>
+                                                <div className=''>
                                                     <h3 className='text-lg md:text-xl font-bold'>
                                                         {card.title}
                                                     </h3>
                                                 </div>
                                             </div>
                                             
-                                            <div className='mt-8'>
-                                                <p className='text-sm md:text-lg text-justify text-gray-700 tracking-wide'>
+                                            <div className=''>
+                                                <p className='text-sm md:text-lg text-gray-700 tracking-wide'>
                                                     {card.text}
                                                 </p>
                                             </div>
@@ -83,6 +83,12 @@ export const Descriptions = () => {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
+                        <div className="w-full">
+                            <div className="flex justify-center w-full py-2 gap-4">
+                                <a href="#item1" className="bg-gray-600 w-10 h-[3px] rounded-full"></a> 
+                                <a href="#item2" className="bg-gray-100 w-10 h-[3px] rounded-full"></a>
+                            </div>
+                        </div>
                     </div>
                 </div>  
             </div>  

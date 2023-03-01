@@ -13,7 +13,7 @@ export const links = [
         type: 'link'
     },
     {
-        path: 'about',
+        path: 'sobrenosotros',
         name: 'Sobre Nosotros',
         element: null,
         type: 'link'

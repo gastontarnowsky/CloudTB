@@ -14,7 +14,7 @@ export const Footer = () => {
             </div>
 
             <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end sm:mr-10">
-                <a href="/" className="text-zinc-400 text-lg px-3 py-1 border border-transparent hover:border-gray-400 rounded-xl">
+                <a href="#presentacion" className="text-zinc-400 text-lg px-3 py-1 border border-transparent hover:border-gray-400 rounded-xl">
                     CloudTB
                 </a>
 
