@@ -20,3 +20,9 @@ html {
 .text-shadow-one:hover {
     text-shadow: var(--azul) 1px 0 10px;
 }
+.swiper-button-next {
+    color: var(--azulOscuro);
+}
+.swiper-button-prev {
+    color: var(--azulOscuro);
+}

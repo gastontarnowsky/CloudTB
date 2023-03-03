@@ -1,18 +1,24 @@
-import ProgrammingSvg from '../../assets/programming.svg';
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import ProgrammingSvg from '../../assets/programming.svg';
 import Present1 from '../../assets/presentacion1.svg';
 import Present2 from '../../assets/presentacion2.svg';
 
-import 'swiper/swiper.min.css';
 
-import SwiperCore, {
+import { Navigation, Autoplay, A11y } from 'swiper';
+
+import 'swiper/swiper.min.css';
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
+
+/*import SwiperCore, {
     Autoplay,
     Navigation
 } from 'swiper/core';
 
 SwiperCore.use([Autoplay, Navigation]);
-
+*/
 const cardsPresent = [
     {
         img: Present1,
@@ -27,21 +33,22 @@ const cardsPresent = [
 ] 
 
 export const Descriptions = () => {  
+    const [hovered, setHovered] = useState(false);
 
     return (
-        <div className="min-h-screen bg-gradient-to-t from-azul to-white flex flex-col justify-center">
+        <div className="min-h-screen bg-gradient-to-b from-gris to-azulOscuro flex flex-col justify-center pb-20">
             <div className='w-11/12 md:w-9/12 mx-auto'>
                 <div className='flex flex-col md:gap-8 md:flex-row md:items-center'>
                     <div className='md:w-1/2 mt-10'>
                         <div className=''>
-                            <h2 className='text-2xl'>
-                                Con un equipo de <span className='text-azul font-bold'>programadores</span> experimentados {""}
-                                y de <span className='text-azul font-bold'>diseñadores</span> muy creativos y detallistas {""} 
-                                llevamos tu idea a una aplicación <span className='text-azul font-bold'>web</span> y/o <span className='text-azul font-bold'>movil</span>.
+                            <h2 className='text-2xl text-gray-900'>
+                                Con un equipo de <span className='text-azulOscuro font-bold'>programadores</span> experimentados {""}
+                                y de <span className='text-azulOscuro font-bold'>diseñadores</span> muy creativos y detallistas {""} 
+                                llevamos tu idea a una aplicación <span className='text-azulOscuro font-bold'>web</span> y/o <span className='text-azulOscuro font-bold'>movil</span>.
                                 <br />
-                                También podes acceder a nuestro panel de <span className='text-azul font-bold'>servicios</span> {""}
-                                donde vas a encontrar herramientas ya <span className='text-azul font-bold'>desarrolladas</span> {""} 
-                                y <span className='text-azul font-bold'>customizables</span> que puedes implementar en tu negocio y aumentar tu  productividad.
+                                También podes acceder a nuestro panel de <span className='text-azulOscuro font-bold'>servicios</span> {""}
+                                donde vas a encontrar herramientas ya <span className='text-azulOscuro font-bold'>desarrolladas</span> {""} 
+                                y <span className='text-azulOscuro font-bold'>customizables</span> que puedes implementar en tu negocio y aumentar tu  productividad.
                             </h2>
                         </div>
                         <div className='w-full mt-10'>
@@ -52,8 +59,16 @@ export const Descriptions = () => {
                             />
                         </div>
                     </div>
-                    <div className='md:w-1/2'>
-                        <Swiper>
+                    <div className='md:w-1/2'        
+                        onMouseEnter={() => setHovered(true)}
+                        onMouseLeave={() => setHovered(false)}
+                    >
+                        <Swiper
+                            modules={[Navigation, Autoplay, A11y]}
+                            navigation={hovered ? true : false}
+                            autoplay={true}
+                            loop={true}
+                        >
                             {cardsPresent.map((card) => (
                                 <SwiperSlide key={card.title}>
                                     <li className='px-10 mx-10 bg-white mt-10 mb-5 py-10 rounded-xl shadow-lg shadow-neutral-500 h-[450px] md:h-auto lg:h-[500px] xl:h-[450px]'>
@@ -83,12 +98,6 @@ export const Descriptions = () => {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-                        <div className="w-full">
-                            <div className="flex justify-center w-full py-2 gap-4">
-                                <a href="#item1" className="bg-gray-600 w-10 h-[3px] rounded-full"></a> 
-                                <a href="#item2" className="bg-gray-100 w-10 h-[3px] rounded-full"></a>
-                            </div>
-                        </div>
                     </div>
                 </div>  
             </div>  

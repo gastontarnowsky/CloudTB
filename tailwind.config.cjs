@@ -45,10 +45,13 @@ module.exports = {
         hiddenModal: 'hiddenModal 1s ease-in-out forwards'
       },
       colors: {
-        azul: "#66b6f3",
-        azulTwo: "#96ccf5",
+        azul: "#8b95ff",
+        azulTwo: "#8b95ff",
         azulOscuro: '#290042',
-        rojo: '#fd3456',
+        rojo: '#f4905b',
+        gris: "rgba(248, 248, 253, 0.5)",
+        azulOscurorgba: "rgba(41, 0, 66, 0.60)",
+        azulViejo: "rgba(102, 182, 243, 0.99)"
       },
       fontFamily: {
         'sans': ['ui-sans-serif', 'system-ui'],

@@ -8,7 +8,7 @@ export const Header = () => {
     const { handleModal, links } = useContext(UIContext);
 
     return (
-        <header className='fixed z-40 top-0 left-0 w-full bg-azulOscuro'>
+        <header className='fixed z-40 top-0 left-0 w-full bg-azulOscuro '>
             <div className='w-11/12 md:w-9/12 mx-auto py-3'>
                 <div className='flex items-center justify-between'>
                     <a
