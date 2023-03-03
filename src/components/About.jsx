@@ -132,7 +132,7 @@ export const About = () => {
             </p>
 
             {/*** CARDS ***/}
-            <div className="pb-20 mx-20  md:w-30 lg:w-30"
+            <div className="pb-20 px-5 md:px-10 lg:px-20"
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
             >
