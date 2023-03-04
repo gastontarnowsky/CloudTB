@@ -47,10 +47,15 @@ module.exports = {
       colors: {
         azul: "#8b95ff",
         azulTwo: "#8b95ff",
+
         azulOscuro: '#290042',
-        rojo: '#f4905b',
-        gris: "rgba(248, 248, 253, 0.5)",
-        azulOscurorgba: "rgba(41, 0, 66, 0.60)",
+        azulOscurorgba: "rgba(41, 0, 66, 1)",
+        azulOscuroMensaje: 'rgba(41, 0, 66, 0.3)',
+        azulOscuroFocus: 'rgba(41, 0, 66, 0.1)',
+        azulOscuroInput: 'rgba(110, 40, 156, 0.9)',
+        
+        rojo: '#fd3456',
+        gris: "rgba(232, 239, 247, 0.99)",
         azulViejo: "rgba(102, 182, 243, 0.99)"
       },
       fontFamily: {

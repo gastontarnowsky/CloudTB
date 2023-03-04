@@ -16,7 +16,7 @@ export const Input = ({
     return (
         <>
             <input 
-                className={`transition-all duration-300 bg-white border-b-2 ${error ? 'border-red-400' : 'border-indigo-400'} mt-8 w-full py-2 px-2 outline-none focus:bg-indigo-50 focus:rounded-lg`}
+                className={`transition-all duration-300 bg-white border-b-2 ${error ? 'border-rojo' : 'border-azulOscuroInput'} mt-8 w-full py-2 px-2 outline-none focus:bg-azulOscuroFocus text-black focus:rounded-lg`}
                 id={id}
                 name={name}
                 placeholder={placeholder}

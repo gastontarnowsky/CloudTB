@@ -3,10 +3,10 @@
 export const IconEmail = ({
     width = 'w-16',
     height = 'h-16',
-    bg = 'bg-blue-100',
+    bg = 'bg-azulOscuroMensaje',
     iconWidth = 'w-12',
     iconHeight = 'h-12',
-    textColor = 'text-blue-600'
+    textColor = 'text-azulOscuro'
 }) => {
 
     return (

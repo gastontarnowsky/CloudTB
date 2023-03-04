@@ -51,7 +51,7 @@ export const Modal = () => {
                                 className={`w-full mt-4`}
                             >
                                 <fieldset>
-                                    <legend className='text-black text-lg md:text-xl font-medium tracking-wide'>
+                                    <legend className='text-azulOscuro text-lg md:text-xl font-medium tracking-wide'>
                                         ¿En qué te podemos ayudar?
                                     </legend>
                                     <Input
@@ -93,7 +93,7 @@ export const Modal = () => {
                                 </fieldset>
                                 <button
                                     type='submit'
-                                    className='mt-8 py-2.5 rounded-lg w-full text-center font-bold text-indigo-400 hover:text-white bg-white hover:bg-indigo-600 transition-all duration-300 border-2 border-indigo-400 hover:border-indigo-600'
+                                    className='mt-8 py-2.5 rounded-lg w-full text-center font-bold text-azulOscuro hover:text-white bg-white hover:bg-azulOscuro transition-all duration-300 border-2 border-azulOscuro'
                                 >
                                     Enviar
                                 </button>

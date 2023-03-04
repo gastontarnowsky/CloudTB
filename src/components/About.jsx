@@ -82,12 +82,12 @@ export const About = () => {
     const [hovered, setHovered] = useState(false);
     
   return (
-    <div className="text-5xl text-center" id="sobrenosotros">
+    <div className=" text-5xl text-center" id="sobrenosotros">
 
         {/*** Primer imagen Sobre Nosotros ***/}
         <div 
             className=" bg-cover bg-center"
-            style={{ backgroundImage: 'linear-gradient(to top, rgba(248, 248, 253, 0.5), rgba(41, 0, 66, 0.99)), url(/sobre4kkk.jpg)', padding: '0 0 10rem 0' }}
+            style={{ backgroundImage: 'linear-gradient(to top, rgba(232, 239, 247, 0.4), rgba(41, 0, 66, 1)), url(/sobre4kkk.jpg)', padding: '0 0 10rem 0' }}
         >
             <div className="pt-32 pb-20">
                 <p className="font-rajdhani  font-semibold tracking-[4px] text-6xl md:text-8xl text-zinc-200 pt-24 mb-10">

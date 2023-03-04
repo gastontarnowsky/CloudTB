@@ -36,7 +36,7 @@ export const Descriptions = () => {
     const [hovered, setHovered] = useState(false);
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-gris to-azulOscuro flex flex-col justify-center pb-20">
+        <div className="min-h-screen bg-gradient-to-b from-gris to-azulOscurorgba flex flex-col justify-center pb-20">
             <div className='w-11/12 md:w-9/12 mx-auto'>
                 <div className='flex flex-col md:gap-8 md:flex-row md:items-center'>
                     <div className='md:w-1/2 mt-10'>

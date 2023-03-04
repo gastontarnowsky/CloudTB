@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, LinkNavigate } from '../components';
 import { UIContext } from '../contexts'; 
-import cloudIcon from '../assets/cloud.png';
+import cloudIcon from '../assets/cloud3.png';
 export const Header = () => {
 
     const { handleModal, links } = useContext(UIContext);

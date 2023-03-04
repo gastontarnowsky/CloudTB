@@ -15,7 +15,7 @@ export const Textarea = ({
     return (
         <>
             <textarea
-                className='transition-all h-24 duration-300 bg-white border-b-2 border-indigo-400 mt-8 w-full py-2 px-2 outline-none focus:bg-indigo-50 focus:rounded-lg'
+                className='transition-all h-24 duration-300 bg-white border-b-2 border-azulOscuroInput mt-8 w-full py-2 px-2 outline-none focus:bg-azulOscuroFocus focus:rounded-lg'
                 id={id}
                 name={name}
                 placeholder={placeholder}
