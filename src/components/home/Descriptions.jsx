@@ -68,6 +68,7 @@ export const Descriptions = () => {
                             navigation={hovered ? true : false}
                             autoplay={true}
                             loop={true}
+                            grabCursor={true}
                         >
                             {cardsPresent.map((card) => (
                                 <SwiperSlide key={card.title}>

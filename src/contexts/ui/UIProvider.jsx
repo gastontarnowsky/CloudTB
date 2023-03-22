@@ -5,8 +5,11 @@ import { UIContext } from '.';
 const UIProvider = ({children}) => {
     
     const [modal, setModal] = useState(false);
+    const [sidebar, setSidebar] = useState(false);
 
     const handleModal = () => setModal(!modal);
+
+    const handleSidebar = ()=> setSidebar(!sidebar);
 
     return (
         <UIContext.Provider
@@ -14,6 +17,9 @@ const UIProvider = ({children}) => {
                 modal,
                 links,
                 handleModal,
+                sidebar,
+                setSidebar,
+                handleSidebar
             }}
         >
             {children}

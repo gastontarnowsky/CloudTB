@@ -5,44 +5,32 @@ import { UIContext } from '../contexts';
 import cloudIcon from '../assets/cloud3.png';
 export const Header = () => {
 
-    const { handleModal, links } = useContext(UIContext);
+    const { handleModal, links, sidebar, handleSidebar } = useContext(UIContext);
 
     return (
-        <header className='fixed z-40 top-0 left-0 w-full bg-azulOscuro '>
-            <div className='w-11/12 md:w-9/12 mx-auto py-3'>
-                <div className='flex items-center justify-between'>
+        <header className={` ${sidebar ? " -left-0 " : " -left-full "} transition-all h-full lg:static w-[80%] md:w-[70%] lg:w-full fixed z-40 top-0 bg-azulOscuro lg:rounded-b-md `}>
+            <div className='w-11/12 md:w-9/12 mx-auto py-3 '>
+                <div className='block lg:flex items-center justify-between'>
                     <a
                         href={'#presentacion'}
-                        className={`w-32 `}
+                        className={`w-1/5`}
+                        onClick={()=> handleSidebar()}
                     >
-                        <img 
-                            src={cloudIcon}
-                            alt={'Cloud icon'}
-                            className=''
-                        />
+                        <p className='uppercase tracking-[3px] mt-8 lg:mt-0 font-bold font-chakra text-2xl text-white'> 
+                            Innova<span className='text-rojo'>dos</span>
+                        </p>
                     </a>
 
-                    {/* <div className="gap-4 block lg:flex text-center ">
-                        <a 
-                            href="#sobrenosotros" 
-                            className="font-rajdhani text-zinc-600 text-2xl px-3 py-1 border-2 border-transparent hover:border-zinc-400 rounded-xl transform transition-all"
-                        >
-                            Sobre Nosotros
-                        </a>
-
-                        <button type="button" onClick={handleModal} className="text-lg font-chakra tracking-[1px] px-3 py-1 border-2 border-azul rounded-xl font-bold hover:bg-azul hover:text-white hover:border-zinc-600 hover:border-2 transform transition-all">
-                            <p>Contáctanos</p>
-                        </button>
-                    </div> */}
-                    <nav className='hidden md:block'>
-                        <ul className='flex items-center gap-4'>
+                    <nav className='block '>
+                        <ul className='flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8 '>
                             {links.map((link) => (
                                 <li
                                     key={link.path}
+                                    className=""
                                 >
                                     {link.type === 'button' ? (
                                         <Button
-                                            customClass='px-6'
+                                            customClass='px-6 flex-end'
                                             type={'button'}
                                             callback={function() {
                                                 handleModal()
@@ -50,7 +38,12 @@ export const Header = () => {
                                             text={link.name}
                                         />
                                     ) : ( 
-                                        <LinkNavigate link={link} />
+                                        <LinkNavigate 
+                                            link={link} 
+                                            callback={function() {
+                                                handleSidebar()
+                                            }}
+                                        />
                                     )}
                                 </li>
                             ))}
